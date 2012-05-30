@@ -61,6 +61,9 @@ typedef enum{
 }
 
 @property(nonatomic,assign) id <EGORefreshTableHeaderDelegate> delegate;
+@property(nonatomic,retain) UIColor* textColor;
+@property(nonatomic,retain) UIColor* textShadowColor;
+@property(nonatomic,assign) UIImage* arrowImage;
 
 - (void)refreshLastUpdatedDate;
 - (void)egoRefreshScrollViewDidScroll:(UIScrollView *)scrollView;
@@ -68,7 +71,6 @@ typedef enum{
 - (void)egoRefreshScrollViewWillBeginDragging:(UIScrollView *)scrollView;
 - (void)egoRefreshScrollViewDataSourceDidFinishedLoading:(UIScrollView *)scrollView;
 - (void)startAnimatingWithScrollView:(UIScrollView *) scrollView;
-- (void)setBackgroundColor:(UIColor *)backgroundColor textColor:(UIColor *) textColor arrowImage:(UIImage *) arrowImage;
 
 
 @end

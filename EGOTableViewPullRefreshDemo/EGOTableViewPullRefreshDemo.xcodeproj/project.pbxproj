@@ -47,8 +47,8 @@
 		C3292AC9142776C0009428B5 /* EGOTableViewPullRefreshDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGOTableViewPullRefreshDemoViewController.m; sourceTree = "<group>"; };
 		C3292ACC142776C0009428B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EGOTableViewPullRefreshDemoViewController.xib; sourceTree = "<group>"; };
 		C3292AD3142776D3009428B5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		C3292AD7142776ED009428B5 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
-		C3292AD8142776ED009428B5 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		C3292AD7142776ED009428B5 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGORefreshTableHeaderView.h; path = ../../../../EGOTableViewPullRefresh/Classes/EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		C3292AD8142776ED009428B5 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGORefreshTableHeaderView.m; path = ../../../../EGOTableViewPullRefresh/Classes/EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
 		C3292AD9142776ED009428B5 /* LoadMoreTableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadMoreTableFooterView.h; sourceTree = "<group>"; };
 		C3292ADA142776ED009428B5 /* LoadMoreTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadMoreTableFooterView.m; sourceTree = "<group>"; };
 		C3292ADB142776ED009428B5 /* MessageInterceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageInterceptor.h; sourceTree = "<group>"; };
@@ -198,6 +198,9 @@
 /* Begin PBXProject section */
 		C3292AA6142776BF009428B5 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
 			buildConfigurationList = C3292AA9142776BF009428B5 /* Build configuration list for PBXProject "EGOTableViewPullRefreshDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -365,6 +368,7 @@
 				C3292AD2142776C0009428B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

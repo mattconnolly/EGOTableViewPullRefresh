@@ -84,8 +84,10 @@
 		[self setState:EGOOPullNormal];
         
         /* Configure the default colors and arrow image */
-        [self setBackgroundColor:nil textColor:nil arrowImage:nil];
-		
+		self.backgroundColor = nil;
+        self.textColor = nil;
+        self.textShadowColor = nil;
+        self.arrowImage = nil;
     }
 	
     return self;
@@ -219,9 +221,48 @@
     _lastUpdatedLabel.shadowColor = [_lastUpdatedLabel.textColor colorWithAlphaComponent:0.1f];
     _statusLabel.shadowColor = [_statusLabel.textColor colorWithAlphaComponent:0.1f];
     
-    _arrowImage.contents = (id)(arrowImage? arrowImage.CGImage : DEFAULT_ARROW_IMAGE.CGImage);
 }
 
+- (void)setBackgroundColor:(UIColor *)backgroundColor
+{
+    backgroundColor = backgroundColor ? backgroundColor : DEFAULT_BACKGROUND_COLOR;
+    [super setBackgroundColor:backgroundColor];
+}
+
+- (UIColor*)textColor
+{
+    return _lastUpdatedLabel.textColor;
+}
+
+- (void)setTextColor:(UIColor *)textColor
+{
+    textColor = textColor ? textColor : DEFAULT_TEXT_COLOR;
+    _lastUpdatedLabel.textColor = textColor;
+    _statusLabel.textColor = textColor;
+}
+
+- (UIColor*)textShadowColor
+{
+    return _statusLabel.shadowColor;
+}
+
+- (void)setTextShadowColor:(UIColor *)textShadowColor
+{
+    textShadowColor = textShadowColor ? textShadowColor : [self.textColor colorWithAlphaComponent:0.1f];
+    _lastUpdatedLabel.shadowColor = textShadowColor;
+    _statusLabel.shadowColor = textShadowColor;
+}
+
+- (UIImage*)arrowImage
+{
+    // write only
+    return nil;
+}
+
+- (void)setArrowImage:(UIImage *)arrowImage
+{
+    _arrowImage.contents = (id)(arrowImage? arrowImage.CGImage : DEFAULT_ARROW_IMAGE.CGImage);
+}
 
 #pragma mark -
 #pragma mark ScrollView Methods
