@@ -151,7 +151,10 @@
 
 - (void)configDisplayProperties
 {
-    [refreshView setBackgroundColor:self.pullBackgroundColor textColor:self.pullTextColor arrowImage:self.pullArrowImage];
+    refreshView.backgroundColor = self.pullBackgroundColor;
+    refreshView.textColor = self.pullTextColor;
+    refreshView.arrowImage = self.pullArrowImage;
+    refreshView.textShadowColor = nil;
     [loadMoreView setBackgroundColor:self.pullBackgroundColor textColor:self.pullTextColor arrowImage:self.pullArrowImage];
 }
 
